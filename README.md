@@ -24,7 +24,7 @@ all in one go
 ```bash
 ## packaged stuff
 # ubuntu
-sudo apt install build-essential fish fzf icdiff neovim ranger tmux
+sudo apt install build-essential exa fish fzf icdiff neovim ranger tmux
 # arch
 sudo pacman -Sy base-devel fish fzf neovim ranger tmux
 yay icdiff
