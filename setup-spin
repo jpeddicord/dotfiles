@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -eux
-
-type iso > /dev/null || exit 0
-
-iso cart insert default
-chmod +x ~/.data/cartridges/default/setup
-exec ~/.data/cartridges/default/setup

@@ -16,7 +16,6 @@
     ~/.asdf: modules/asdf
     ~/.fzf: modules/fzf
     ~/.gitconfig:
-      if: "[ ! $SPIN ]"
     ~/.ssh/config: ssh_config
     ~/.tmux.conf:
 
@@ -25,8 +24,3 @@
     ~/.vimrc:
     ~/.gvimrc:
     ~/.config/nvim: vim
-
-- shell:
-  - command: ./setup-spin
-    stdout: true
-    stderr: true
