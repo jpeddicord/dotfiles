@@ -8,9 +8,10 @@ whee
 related packages
 ================
 
+- [direnv](https://direnv.net)
 - [exa](https://the.exa.website/)
-- [fish](https://fishshell.com/)
 - [fd](https://github.com/sharkdp/fd)
+- [fish](https://fishshell.com/)
 - [fzf](https://github.com/junegunn/fzf)
 - [icdiff](https://github.com/jeffkaufman/icdiff)
 - [neovim](https://github.com/neovim/neovim)
@@ -24,9 +25,9 @@ all in one go
 ```bash
 ## packaged stuff
 # ubuntu
-sudo apt install build-essential exa fish fzf icdiff neovim ranger tmux
+sudo apt install build-essential direnv exa fd-find fish fzf icdiff neovim ranger ripgrep tmux
 # arch
-sudo pacman -Sy base-devel fish fzf neovim ranger tmux
+sudo pacman -Sy base-devel direnv fd fish fzf neovim ranger ripgrep tmux
 yay icdiff
 ```
 
