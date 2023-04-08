@@ -1,6 +1,3 @@
-[user]
-	name = Jacob Peddicord
-	email = jacob@peddicord.net
 [color]
 	ui = true
 [alias]
@@ -10,9 +7,6 @@
 	df = diff
 	dff = diff --cached
 	dfff = diff HEAD
-	dt = icdiff
-	dtt = icdiff --cached
-	dttt = icdiff HEAD
 	lg = log --graph --decorate --abbrev-commit --date=relative --all --pretty=format:'%C(blue)%h%C(reset) - %C(cyan)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold blue)- %an%C(reset)%C(yellow)%d%C(reset)'
 	prune = fetch --prune
 	st = status
