@@ -4,8 +4,8 @@ if not set -q LANG
 end
 
 # editors
-set -gx EDITOR "vim"
-set -gx VISUAL "vim"
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
 set -gx PAGER "less"
 
 # path additions
@@ -24,7 +24,6 @@ alias l 'exa --git --long'
 alias ll 'exa --git --long --all'
 alias rm 'rm -i'
 alias tmux 'tmux -2'
-alias vi 'vim'
 
 # load up any scripts that need to run after this
 for conf in ~/.config/fish/conf-after.d/*.fish
