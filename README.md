@@ -14,7 +14,7 @@ related packages
 - [fish](https://fishshell.com/)
 - [fzf](https://github.com/junegunn/fzf)
 - [neovim](https://github.com/neovim/neovim)
-- [ranger](https://github.com/ranger/ranger)
+- [nnn](https://github.com/jarun/nnn)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [tmux](https://github.com/tmux/tmux)
 
@@ -23,10 +23,8 @@ all in one go
 
 ```bash
 ## packaged stuff
-# ubuntu
-sudo apt install build-essential direnv exa fd-find fish fzf neovim ranger ripgrep tmux
-# arch
-sudo pacman -Sy base-devel direnv fd fish fzf neovim ranger ripgrep tmux
+# debian
+sudo apt install build-essential direnv exa fd-find fish fzf neovim nnn ripgrep tmux
 ```
 
 maintenance
