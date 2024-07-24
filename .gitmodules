@@ -2,14 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "vim/bundle/gundo.vim"]
-	path = vim/pack/default/start/gundo.vim
-	url = https://github.com/sjl/gundo.vim
-	ignore = dirty
-[submodule "vim/bundle/todo.txt-vim"]
-	path = vim/pack/default/start/todo.txt-vim
-	url = https://github.com/freitass/todo.txt-vim
-	ignore = dirty
 [submodule "vim/bundle/vim-airline"]
 	path = vim/pack/default/start/vim-airline
 	url = https://github.com/bling/vim-airline
@@ -18,14 +10,6 @@
 	path = vim/pack/default/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth
 	ignore = dirty
-[submodule "vim/bundle/vim-surround"]
-	path = vim/pack/default/start/vim-surround
-	url = https://github.com/tpope/vim-surround
-	ignore = dirty
-[submodule "vim/bundle/apprentice"]
-	path = vim/pack/default/start/apprentice
-	url = https://github.com/romainl/Apprentice
-	ignore = dirty
 [submodule "vim/bundle/vim-two-firewatch"]
 	path = vim/pack/default/start/vim-two-firewatch
 	url = https://github.com/rakr/vim-two-firewatch
@@ -33,10 +17,6 @@
 [submodule "fzf"]
 	path = modules/fzf
 	url = https://github.com/junegunn/fzf
-	ignore = dirty
-[submodule "vim/bundle/fzf.vim"]
-	path = vim/pack/default/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
 	ignore = dirty
 [submodule "asdf"]
 	path = modules/asdf

@@ -122,7 +122,3 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" gundo plugin
-let g:gundo_preview_bottom=1
-nmap <Leader>u :GundoToggle<CR>
-
