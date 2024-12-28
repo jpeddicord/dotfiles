@@ -3,16 +3,14 @@
 [color]
 	ui = true
 [alias]
-	br = branch
 	ci = commit
-	co = checkout
+	s = switch
+	st = status
 	df = diff
 	dff = diff --cached
 	dfff = diff HEAD
 	lg = log --graph --decorate --abbrev-commit --date=relative --all --pretty=format:'%C(blue)%h%C(reset) - %C(cyan)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold blue)- %an%C(reset)%C(yellow)%d%C(reset)'
-	prune = fetch --prune
-	st = status
-	unstage = reset HEAD --
+	orb = "!f() { git fetch origin ${1-main}:${1-main} && git rebase ${1-main}; }; f"
 [push]
 	default = simple
 [pull]
@@ -25,6 +23,8 @@
 [commit]
 	verbose = 1
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
