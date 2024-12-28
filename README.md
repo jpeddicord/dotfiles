@@ -8,23 +8,22 @@ whee
 related packages
 ================
 
+- [btop](https://github.com/aristocratos/btop)
 - [direnv](https://direnv.net)
-- [exa](https://the.exa.website/)
+- [eza](https://github.com/eza-community/eza)
 - [fd](https://github.com/sharkdp/fd)
 - [fish](https://fishshell.com/)
 - [fzf](https://github.com/junegunn/fzf)
 - [neovim](https://github.com/neovim/neovim)
-- [nnn](https://github.com/jarun/nnn)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [tmux](https://github.com/tmux/tmux)
+- [yazi](https://github.com/sxyazi/yazi)
 
 all in one go
 -------------
 
 ```bash
 ## packaged stuff
-# debian
-sudo apt install build-essential direnv exa fd-find fish fzf neovim nnn ripgrep tmux
+brew install btop direnv eza fd fish fzf neovim ripgrep yazi
 ```
 
 maintenance
