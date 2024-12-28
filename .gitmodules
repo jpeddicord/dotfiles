@@ -2,17 +2,17 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "vim/bundle/vim-airline"]
+[submodule "catppuccin"]
+	path = vim/pack/default/start/catppuccin
+	url = https://github.com/catppuccin/nvim
+	ignore = dirty
+[submodule "airline"]
 	path = vim/pack/default/start/vim-airline
 	url = https://github.com/bling/vim-airline
 	ignore = dirty
-[submodule "vim/bundle/vim-sleuth"]
+[submodule "sleuth"]
 	path = vim/pack/default/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth
-	ignore = dirty
-[submodule "vim/bundle/vim-two-firewatch"]
-	path = vim/pack/default/start/vim-two-firewatch
-	url = https://github.com/rakr/vim-two-firewatch
 	ignore = dirty
 [submodule "fzf"]
 	path = modules/fzf

@@ -46,20 +46,14 @@ set scrolloff=3
 set ruler
 set title
 " misc
-set mouse=a
 set nobackup
 set noerrorbells
 set novisualbell
 set shortmess+=I
 
 " color scheme
-syntax on
-set t_Co=256
-set termguicolors
-set background=dark
-let g:two_firewatch_italics=1
-let g:airline_theme='twofirewatch'
-colorscheme two-firewatch
+let g:airline_theme='catppuccin'
+colorscheme catppuccin-frappe
 
 " leader keys
 let mapleader="\<Space>"
