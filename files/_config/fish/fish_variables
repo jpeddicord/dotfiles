@@ -48,4 +48,11 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/sbin
+SETUVAR hydro_color_duration:aaaaaa
+SETUVAR hydro_color_error:bf4100
+SETUVAR hydro_color_git:8AB900
+SETUVAR hydro_color_prompt:f87e09
+SETUVAR hydro_color_pwd:5ac9ef
+SETUVAR hydro_multiline:true
+SETUVAR hydro_symbol_prompt:\u2771\u2771\u2771
+SETUVAR hydro_symbol_start:\x5cn

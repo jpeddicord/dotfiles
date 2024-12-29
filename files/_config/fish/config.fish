@@ -9,12 +9,9 @@ set -gx VISUAL "nvim"
 set -gx PAGER "less"
 
 # path additions
-# fish_user_paths doesn't work well with home directory paths
-for path in ~/.local/bin ~/.cargo/bin /opt/homebrew/bin
-    if not contains $path $PATH
-        set -x PATH $path $PATH
-    end
-end
+fish_add_path -ga ~/.local/bin
+fish_add_path -ga ~/.cargo/bin
+fish_add_path -ga /opt/homebrew/bin
 
 # louder sudo prompt
 set -gx SUDO_PROMPT (set_color -b magenta white)"[sudo]"(set_color normal)" password for %u: "(echo -e '\a')

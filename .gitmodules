@@ -3,14 +3,20 @@
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
 
-# shell
+# general shell
+[submodule "asdf"]
+	path = files/asdf
+	url = https://github.com/asdf-vm/asdf.git
+	ignore = dirty
 [submodule "fzf"]
 	path = files/fzf
 	url = https://github.com/junegunn/fzf
 	ignore = dirty
-[submodule "asdf"]
-	path = files/asdf
-	url = https://github.com/asdf-vm/asdf.git
+
+# fish modules
+[submodule "hydro"]
+	path = files/_config/fish/modules/hydro
+	url = https://github.com/jorgebucaran/hydro
 	ignore = dirty
 
 # nvim

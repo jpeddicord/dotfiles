@@ -12,6 +12,13 @@
       relink: true
   
 - link:
+    ~/:
+      glob: true
+      path: files/*
+      prefix: '.'
+      exclude:
+        - files/_*
+
     # underscored directories -> merge with contents instead of link
     ~/.config:
       glob: true
@@ -19,10 +26,3 @@
     ~/.ssh:
       glob: true
       path: files/_ssh/*
-
-    ~/:
-      glob: true
-      path: files/*
-      prefix: '.'
-      exclude:
-        - files/_*
