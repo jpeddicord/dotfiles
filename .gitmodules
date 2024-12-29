@@ -4,10 +4,6 @@
 	ignore = dirty
 
 # general shell
-[submodule "asdf"]
-	path = files/asdf
-	url = https://github.com/asdf-vm/asdf.git
-	ignore = dirty
 [submodule "fzf"]
 	path = files/fzf
 	url = https://github.com/junegunn/fzf

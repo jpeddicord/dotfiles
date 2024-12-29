@@ -14,6 +14,7 @@ related packages
 - [fd](https://github.com/sharkdp/fd)
 - [fish](https://fishshell.com/)
 - [fzf](https://github.com/junegunn/fzf)
+- [mise](https://mise.jdx.dev)
 - [neovim](https://github.com/neovim/neovim)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [yazi](https://github.com/sxyazi/yazi)
@@ -23,7 +24,7 @@ all in one go
 
 ```bash
 ## packaged stuff
-brew install btop direnv eza fd fish fzf neovim ripgrep yazi
+brew install btop direnv eza fd fish fzf mise neovim ripgrep yazi
 ```
 
 maintenance

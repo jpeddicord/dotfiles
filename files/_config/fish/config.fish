@@ -3,11 +3,6 @@ if not set -q LANG
     set -gx LANG "en_US.UTF-8"
 end
 
-# editors
-set -gx EDITOR "nvim"
-set -gx VISUAL "nvim"
-set -gx PAGER "less"
-
 # path additions
 fish_add_path -ga ~/.local/bin
 fish_add_path -ga ~/.cargo/bin
@@ -15,6 +10,15 @@ fish_add_path -ga /opt/homebrew/bin
 
 # louder sudo prompt
 set -gx SUDO_PROMPT (set_color -b magenta white)"[sudo]"(set_color normal)" password for %u: "(echo -e '\a')
+
+# editors
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
+set -gx PAGER "less"
+if type -q nvim
+    alias vi nvim
+    alias vim nvim
+end
 
 # better ls
 if type -q eza
