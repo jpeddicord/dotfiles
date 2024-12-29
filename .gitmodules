@@ -2,23 +2,27 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "catppuccin"]
-	path = vim/pack/default/start/catppuccin
-	url = https://github.com/catppuccin/nvim
-	ignore = dirty
-[submodule "airline"]
-	path = vim/pack/default/start/vim-airline
-	url = https://github.com/bling/vim-airline
-	ignore = dirty
-[submodule "sleuth"]
-	path = vim/pack/default/start/vim-sleuth
-	url = https://github.com/tpope/vim-sleuth
-	ignore = dirty
+
+# shell
 [submodule "fzf"]
-	path = modules/fzf
+	path = files/fzf
 	url = https://github.com/junegunn/fzf
 	ignore = dirty
 [submodule "asdf"]
-	path = modules/asdf
+	path = files/asdf
 	url = https://github.com/asdf-vm/asdf.git
+	ignore = dirty
+
+# nvim
+[submodule "airline"]
+	path = files/_config/nvim/pack/default/start/airline
+	url = https://github.com/bling/vim-airline
+	ignore = dirty
+[submodule "catppuccin"]
+	path = files/_config/nvim/pack/default/start/catppuccin
+	url = https://github.com/catppuccin/nvim
+	ignore = dirty
+[submodule "sleuth"]
+	path = files/_config/nvim/pack/default/start/sleuth
+	url = https://github.com/tpope/vim-sleuth
 	ignore = dirty

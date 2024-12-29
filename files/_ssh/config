@@ -1,0 +1,4 @@
+Host *
+	HashKnownHosts no
+	ServerAliveInterval 30
+	ServerAliveCountMax 2

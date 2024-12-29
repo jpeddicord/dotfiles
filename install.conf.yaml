@@ -4,22 +4,25 @@
   - git submodule update --init --recursive
 
 - create:
-  - ~/.config
   - ~/.local/bin
-  - ~/.ssh
 
+- defaults:
+    link:
+      create: true
+      relink: true
+  
 - link:
-    # shell
-    ~/.config/fish: fish
+    # underscored directories -> merge with contents instead of link
+    ~/.config:
+      glob: true
+      path: files/_config/*
+    ~/.ssh:
+      glob: true
+      path: files/_ssh/*
 
-    # shell environment & utilities
-    ~/.asdf: modules/asdf
-    ~/.fzf: modules/fzf
-    ~/.gitconfig:
-    ~/.ssh/config: ssh_config
-    ~/.tmux.conf:
-
-    # vim
-    ~/.vim:
-    ~/.vimrc:
-    ~/.config/nvim: vim
+    ~/:
+      glob: true
+      path: files/*
+      prefix: '.'
+      exclude:
+        - files/_*
