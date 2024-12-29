@@ -25,12 +25,6 @@ if type -q eza
     alias ll 'eza --git --long --all'
 end
 
-# full file browser
-if type -q yazi
-    alias lll 'yazi'
-    alias y 'yazi'
-end
-
 # interactive rm + mac homebrew coreutils check
 if type -q grm
     alias rm 'grm -i'
