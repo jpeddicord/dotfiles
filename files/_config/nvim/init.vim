@@ -55,7 +55,6 @@ nnoremap <Leader>e :enew<CR>
 nnoremap <Leader>d :cd %:p:h<CR>:pwd<CR>
 nnoremap <Leader>p :set paste!<CR>
 nnoremap <Leader>/ :nohlsearch<CR>
-nnoremap <Leader>o :Files<CR>
 
 " vertical movements by screen line
 nnoremap j gj
@@ -73,7 +72,6 @@ endfunction
 cnoreabbrev W w
 cnoreabbrev Q q
 
-
 " airline statusline
 let g:airline_left_sep = ""
 let g:airline_right_sep = ""
@@ -84,4 +82,3 @@ let g:airline#extensions#tabline#formatter = "unique_tail_improved"
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
-
