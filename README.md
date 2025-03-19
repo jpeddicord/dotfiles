@@ -5,26 +5,24 @@ usage
 
 whee
 
-related packages
-================
-
-- [btop](https://github.com/aristocratos/btop)
-- [direnv](https://direnv.net)
-- [eza](https://github.com/eza-community/eza)
-- [fd](https://github.com/sharkdp/fd)
-- [fish](https://fishshell.com/)
-- [fzf](https://github.com/junegunn/fzf)
-- [mise](https://mise.jdx.dev)
-- [neovim](https://github.com/neovim/neovim)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [yazi](https://github.com/sxyazi/yazi)
+- shell essentials
+  - [nushell](https://www.nushell.sh) - `brew install nushell`
+  - [starship](https://starship.rs) - `brew install starship`
+  - [mise](https://mise.jdx.dev) - `brew install mise`
+  - [fzf](https://github.com/junegunn/fzf) - `brew install fzf` `sudo apt install fzf`
+  - [bat](https://github.com/sharkdp/bat) - `brew install bat`
+  - [ripgrep](https://github.com/BurntSushi/ripgrep) - `brew install ripgrep` `sudo apt install ripgrep`
+  - [yazi](https://github.com/sxyazi/yazi) - `brew install yazi`
+  
+- system utilities
+  - [btop](https://github.com/aristocratos/btop) - `brew install btop` `sudo apt install btop`
+  - [neovim](https://github.com/neovim/neovim) - `brew install neovim` `sudo apt install neovim`
 
 all in one go
 -------------
 
 ```bash
-## packaged stuff
-brew install btop direnv eza fd fish fzf mise neovim ripgrep yazi
+brew install nushell starship mise fzf bat ripgrep yazi btop neovim
 ```
 
 maintenance

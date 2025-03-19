@@ -26,3 +26,11 @@
     ~/.ssh:
       glob: true
       path: files/_ssh/*
+
+# mac-specifc shims
+- defaults:
+    link:
+      if: sh -c '[ `uname` = Darwin ]'
+- link:
+    ~/Library/Application Support/nushell:
+      path: ~/.config/nushell
