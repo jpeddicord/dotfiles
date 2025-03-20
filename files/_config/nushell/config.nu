@@ -12,8 +12,9 @@ $env.config.buffer_editor = ["nvim"]
 $env.VISUAL = "nvim"
 $env.EDITOR = "nvim"
 
-use ($nu.default-config-dir | path join modules mise.nu)
-use ($nu.default-config-dir | path join modules starship.nu)
+overlay use ($nu.default-config-dir | path join modules mise.nu)
+overlay use ($nu.default-config-dir | path join modules starship.nu)
+overlay use ($nu.default-config-dir | path join modules yazi.nu)
 
 alias l = ls
 alias la = ls -a
