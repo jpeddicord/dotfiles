@@ -7,6 +7,8 @@ $env.path = [
 ] ++ $env.path
 
 $env.config.show_banner = false
+$env.config.history.isolation = true
+
 $env.config.edit_mode = "vi"
 $env.config.buffer_editor = ["nvim"]
 $env.VISUAL = "nvim"
