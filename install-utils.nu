@@ -5,6 +5,9 @@ let repos = [
     [starship/starship, [
         starship
     ]],
+    [carapace-sh/carapace-bin, [
+        carapace
+    ]]
     [jdx/mise, [
         mise
     ]],
