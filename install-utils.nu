@@ -20,9 +20,6 @@ let repos = [
     [BurntSushi/ripgrep, [
         rg
     ]],
-    [neovim/neovim, [
-        nvim
-    ]]
 ]
 
 $repos | each {|r|
