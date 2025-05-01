@@ -1,16 +1,37 @@
-- clean: ['~']
-
-- shell:
-  - git submodule update --init --recursive
-
-- create:
-  - ~/.local/bin
+# https://github.com/anishathalye/dotbot
 
 - defaults:
     link:
       create: true
       relink: true
-  
+    shell:
+      stdout: true
+      stderr: true
+
+- create:
+  - ~/.local/bin
+
+- clean:
+  - '~'
+  - '~/.config'
+  - '~/.local/bin'
+  - '~/.ssh'
+
+- shell:
+  - git submodule update --init --recursive
+  - sh -c 'test -f ~/.local/bin/dra || ./dra/install.sh --to ~/.local/bin'
+  - >-
+    sh -c 'test -f ~/.local/bin/nu ||
+    ~/.local/bin/dra download -a
+    -o ~/.local/bin
+    -I nu
+    -I nu_plugin_polars
+    -I nu_plugin_formats
+    -I nu_plugin_gstat
+    -I nu_plugin_query
+    nushell/nushell'
+  - ~/.local/bin/nu install-utils.nu
+
 - link:
     ~/:
       glob: true

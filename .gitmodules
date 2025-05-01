@@ -28,3 +28,6 @@
 	path = files/_config/nvim/pack/default/start/sleuth
 	url = https://github.com/tpope/vim-sleuth
 	ignore = dirty
+[submodule "dra"]
+	path = dra
+	url = https://github.com/devmatteini/dra
