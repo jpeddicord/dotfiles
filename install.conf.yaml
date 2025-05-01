@@ -1,7 +1,7 @@
 # https://github.com/anishathalye/dotbot
 
 - defaults:
-    link:
+    link: &link_def
       create: true
       relink: true
     shell:
@@ -19,18 +19,8 @@
 
 - shell:
   - git submodule update --init --recursive
-  - sh -c 'test -f ~/.local/bin/dra || ./dra/install.sh --to ~/.local/bin'
-  - >-
-    sh -c 'test -f ~/.local/bin/nu ||
-    ~/.local/bin/dra download -a
-    -o ~/.local/bin
-    -I nu
-    -I nu_plugin_polars
-    -I nu_plugin_formats
-    -I nu_plugin_gstat
-    -I nu_plugin_query
-    nushell/nushell'
-  - ~/.local/bin/nu install-utils.nu
+  - ./install.macos.sh
+  - ./install.linux.sh
 
 - link:
     ~/:
@@ -48,9 +38,10 @@
       glob: true
       path: files/_ssh/*
 
-# mac-specifc shims
+# mac-specifc
 - defaults:
     link:
+      <<: *link_def
       if: sh -c '[ `uname` = Darwin ]'
 - link:
     ~/Library/Application Support/nushell:
