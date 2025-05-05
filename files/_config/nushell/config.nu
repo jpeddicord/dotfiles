@@ -14,6 +14,13 @@ $env.config.buffer_editor = ["nvim"]
 $env.VISUAL = "nvim"
 $env.EDITOR = "nvim"
 
+$env.PROMPT_INDICATOR_VI_NORMAL = {||
+    let C = (ansi {fg: "#3d3d3d", bg: "#8AB900"})
+    let R = (ansi reset)
+    $"($C) ($R)"
+}
+$env.PROMPT_INDICATOR_VI_INSERT = " "
+
 alias l = ls
 alias la = ls -a
 alias ll = ls -la

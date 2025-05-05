@@ -1,4 +1,5 @@
 format = """
+[ ](bg:#3d3d3d)[ ](bg:#777777)[ ](bg:#c2c2c2) \
 $username\
 $hostname\
 $localip\
@@ -10,6 +11,7 @@ $git_state\
 $custom\
 $sudo\
 $cmd_duration\
+[ ](bg:#c2c2c2)[ ](bg:#777777)[ ](bg:#3d3d3d) \
 $line_break\
 $jobs\
 $battery\
@@ -19,3 +21,14 @@ $os\
 $container\
 $shell\
 $character"""
+
+[character]
+format = '$symbol'
+success_symbol = '[ ❯ ](bold fg:#3d3d3d bg:#5ac9ef)'
+error_symbol = '[ ❯ ](bold fg:#3d3d3d bg:#f87e09)'
+
+[directory]
+style = 'bold fg:#5ac9ef'
+
+[git_branch]
+style = 'bold fg:#5aa0b9'
