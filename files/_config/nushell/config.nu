@@ -27,4 +27,8 @@ alias ll = ls -la
 
 if ((which code | length) > 0) {
     $env.config.buffer_editor = ["code", "-w"]
+    $env.VISUAL = "code -w"
+    $env.EDITOR = "code -w"
 }
+
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash'
