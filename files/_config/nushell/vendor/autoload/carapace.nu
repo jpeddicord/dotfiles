@@ -1,7 +1,5 @@
 # https://carapace-sh.github.io/carapace-bin/setup.html
 
-$env.PATH = ($env.PATH | split row (char esep) | prepend "/Users/tx/Library/Application Support/carapace/bin")
-
 def --env get-env [name] { $env | get $name }
 def --env set-env [name, value] { load-env { $name: $value } }
 def --env unset-env [name] { hide-env $name }
