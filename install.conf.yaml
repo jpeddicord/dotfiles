@@ -8,19 +8,15 @@
       stdout: true
       stderr: true
 
-- create:
-  - ~/.local/bin
-
 - clean:
   - '~'
   - '~/.config'
-  - '~/.local/bin'
   - '~/.ssh'
 
 - shell:
   - git submodule update --init --recursive
-  - ./install.macos.sh
-  - ./install.linux.sh
+  - sh -c 'if [ `uname` = Linux ]; then brew bundle --file Brewfile.linux; fi'
+  - sh -c 'if [ `uname` = Darwin ]; then brew bundle --file Brewfile.macos; fi'
 
 - link:
     ~/:

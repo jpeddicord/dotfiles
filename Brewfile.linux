@@ -1,0 +1,8 @@
+brew "btop"
+brew "carapace"
+brew "mise"
+brew "neovim"
+brew "nushell"
+brew "ripgrep"
+brew "starship"
+brew "yazi"
