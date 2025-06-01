@@ -3,6 +3,7 @@
 $env.path = [
     "~/.local/bin",
     "/opt/homebrew/bin",
+    "/home/linuxbrew/.linuxbrew/bin"
     "/usr/local/bin"
 ] ++ $env.path
 

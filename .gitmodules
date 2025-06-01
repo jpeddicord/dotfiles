@@ -2,10 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "fzf"]
-	path = files/fzf
-	url = https://github.com/junegunn/fzf
-	ignore = dirty
 [submodule "airline"]
 	path = files/_config/nvim/pack/default/start/airline
 	url = https://github.com/bling/vim-airline
@@ -18,6 +14,3 @@
 	path = files/_config/nvim/pack/default/start/sleuth
 	url = https://github.com/tpope/vim-sleuth
 	ignore = dirty
-[submodule "dra"]
-	path = dra
-	url = https://github.com/devmatteini/dra
