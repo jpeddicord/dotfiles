@@ -13,8 +13,9 @@ export-env {
 }
 
 def --env add-hook [field: cell-path new_hook: any] {
+    let field = $field | split cell-path | update optional true | into cell-path
     let old_config = $env.config? | default {}
-    let old_hooks = $old_config | get $field --ignore-errors | default []
+    let old_hooks = $old_config | get $field | default []
     $env.config = ($old_config | upsert $field ($old_hooks ++ [$new_hook]))
 }
 
