@@ -1,0 +1,6 @@
+# this mise.toml is for commands related to this repo and installation;
+# use the one in the `files` directory for system stuff
+
+[tasks.update-modules]
+description = "Update git submodules"
+run = "git submodule update --recursive --remote"
