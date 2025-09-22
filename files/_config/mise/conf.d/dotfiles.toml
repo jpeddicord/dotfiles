@@ -1,0 +1,19 @@
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = []
+
+[tools]
+age = "latest"
+btop = "latest"
+bun = "latest"
+carapace = "latest"
+helix = "latest"
+neovim = "latest"
+node = "latest"
+ripgrep = "latest"
+sops = "latest"
+starship = "latest"
+yazi = "latest"
+
+# nushell ships multiple binaries (plugins)
+"ubi:nushell/nushell" = { version = "latest", extract_all = true }

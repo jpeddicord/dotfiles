@@ -1,2 +1,5 @@
 *~
 *.swp
+
+/files/_config/mise/config.toml
+/files/_config/nushell/history*

@@ -1,7 +1,7 @@
 # https://github.com/anishathalye/dotbot
 
 - defaults:
-    link: &link_def
+    link:
       create: true
       relink: true
     shell:
@@ -15,8 +15,7 @@
 
 - shell:
   - git submodule update --init --recursive
-  - sh -c 'if [ `uname` = Linux ]; then brew bundle --file Brewfile.linux; fi'
-  - sh -c 'if [ `uname` = Darwin ]; then brew bundle --file Brewfile.macos; fi'
+  - sh -c 'which mise || ./mise.run.sh'
 
 - link:
     ~/:
@@ -35,10 +34,12 @@
       path: files/_ssh/*
 
 # mac-specifc
-- defaults:
-    link:
-      <<: *link_def
-      if: sh -c '[ `uname` = Darwin ]'
 - link:
     ~/Library/Application Support/nushell:
       path: ~/.config/nushell
+      if: sh -c '[ `uname` = Darwin ]'
+
+- shell:
+  # add a blank config file for mise commands to edit, instead of dotfiles
+  - touch ~/.config/mise/config.toml
+  - ~/.local/bin/mise install

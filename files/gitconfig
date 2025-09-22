@@ -1,5 +1,9 @@
 [init]
 	defaultBranch = main
+[user]
+	# blanked to require per-repo setting
+	name =
+	email =
 [color]
 	ui = true
 [alias]
@@ -23,8 +27,8 @@
 [commit]
 	verbose = 1
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !gh auth git-credential
