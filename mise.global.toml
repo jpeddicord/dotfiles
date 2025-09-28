@@ -1,4 +1,4 @@
-# packages to install go here; the other mise.toml is for this repository
+# system packages and tasks go here; the other mise.toml is for this repository
 
 [settings]
 experimental = true
@@ -9,6 +9,8 @@ age = "latest"
 btop = { version = "latest", os = ["linux"] }
 bun = "latest"
 carapace = "latest"
+gh = "latest"
+gum = "latest"
 helix = "latest"
 node = "latest"
 ripgrep = "latest"

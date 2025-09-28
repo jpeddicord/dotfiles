@@ -2,4 +2,5 @@
 *.swp
 
 /files/_config/mise/config.toml
+/files/_config/mise/conf.d
 /files/_config/nushell/history*
