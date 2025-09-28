@@ -4,7 +4,7 @@ cd "$(dirname $0)"
 
 # bootstrap mise if not present
 which mise || ./setup/mise.run.sh
-alias mise=~/.local/bin/mise
+export PATH="$HOME/.local/bin:$PATH"
 
 mkdir -p ~/.config/mise/conf.d
 touch ~/.config/mise/config.toml  # mise will write to the first config file it sees
