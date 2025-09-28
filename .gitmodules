@@ -1,7 +1,3 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
 [submodule "airline"]
 	path = files/_config/nvim/pack/default/start/airline
 	url = https://github.com/bling/vim-airline

@@ -1,5 +1,9 @@
 # this mise.toml is for commands related to this repo and installation;
-# use the one in the `files` directory for system stuff
+# see `mise.global.toml` for to-be-deployed packages
+
+[tasks.setup]
+description = "Install dotfiles"
+run = "nu setup/setup.nu"
 
 [tasks.update-modules]
 description = "Update git submodules"

@@ -1,3 +1,5 @@
+# packages to install go here; the other mise.toml is for this repository
+
 [settings]
 experimental = true
 idiomatic_version_file_enable_tools = []
@@ -8,7 +10,6 @@ btop = "latest"
 bun = "latest"
 carapace = "latest"
 helix = "latest"
-neovim = "latest"
 node = "latest"
 ripgrep = "latest"
 sops = "latest"
