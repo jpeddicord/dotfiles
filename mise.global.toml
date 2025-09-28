@@ -6,7 +6,7 @@ idiomatic_version_file_enable_tools = []
 
 [tools]
 age = "latest"
-btop = "latest"
+btop = { version = "latest", os = ["linux"] }
 bun = "latest"
 carapace = "latest"
 helix = "latest"
