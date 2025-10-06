@@ -1,0 +1,28 @@
+
+# extend mode keys, using alt for ipad compat
+
+theme = "nightfox"
+
+[keys.normal]
+"A-u" = "move_line_up"
+"A-e" = "move_line_down"
+"A-n" = "move_char_left"
+"A-i" = "move_char_right"
+"A-l" = "goto_line_start"
+"A-y" = "goto_line_end"
+"A-j" = "page_up"
+"A-h" = "page_down"
+"A-o" = "delete_char_backward"
+"A-;" = "delete_char_forward"
+
+[keys.insert]
+"A-u" = "move_line_up"
+"A-e" = "move_line_down"
+"A-n" = "move_char_left"
+"A-i" = "move_char_right"
+"A-l" = "goto_line_start"
+"A-y" = "goto_line_end"
+"A-j" = "page_up"
+"A-h" = "page_down"
+"A-o" = "delete_char_backward"
+"A-;" = "delete_char_forward"
