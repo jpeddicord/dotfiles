@@ -15,6 +15,7 @@ $env.config.edit_mode = "vi"
 $env.config.buffer_editor = ["hx"]
 $env.VISUAL = "hx"
 $env.EDITOR = "hx"
+$env.COLORTERM = "truecolor"
 
 $env.PROMPT_INDICATOR_VI_NORMAL = {||
     let C = (ansi {fg: "#3d3d3d", bg: "#8AB900"})
