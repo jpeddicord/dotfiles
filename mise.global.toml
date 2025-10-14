@@ -17,6 +17,7 @@ ripgrep = "latest"
 sops = "latest"
 starship = "latest"
 yazi = "latest"
+zellij = "latest"
 
 # nushell ships multiple binaries (plugins)
 "ubi:nushell/nushell" = { version = "latest", extract_all = true }

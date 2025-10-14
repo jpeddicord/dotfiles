@@ -26,5 +26,6 @@ $env.PROMPT_INDICATOR_VI_INSERT = " "
 alias l = ls
 alias la = ls -a
 alias ll = ls -la
+alias z = zellij
 
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash'
