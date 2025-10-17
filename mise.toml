@@ -5,6 +5,9 @@
 description = "Install dotfiles"
 run = "nu setup/setup.nu"
 
-[tasks.update-modules]
-description = "Update git submodules"
-run = "git submodule update --recursive --remote"
+[tasks.maintenance]
+description = "Repo maintenance"
+run = [
+  "git submodule update --recursive --remote",
+  "mise generate bootstrap -w setup/mise.run.sh"
+]
