@@ -1,8 +1,6 @@
-
-# extend mode keys, using alt for ipad compat
-
 theme = "nightfox"
 
+# extend mode keys, using alt for ipad compat
 [keys.normal]
 "A-u" = "move_line_up"
 "A-e" = "move_line_down"

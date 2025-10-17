@@ -11,6 +11,11 @@ def main [] {
     create_new_links files ~
     create_new_links files/_config ~/.config
     create_new_links files/_ssh ~/.ssh
+
+    if (sys host | get name) == "Darwin" {
+      create_new_links files-macos ~
+      create_new_links files-macos/_config ~/.config
+    }
 }
 
 def clean_broken_links [dir: path] {
