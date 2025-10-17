@@ -32,7 +32,7 @@ def clean_broken_links [dir: path] {
 }
 
 def create_new_links [source_dir: path, target_dir: path] {
-    let to_link = glob --exclude ["_*"] $"($source_dir)/*"
+    let to_link = glob --exclude ["_*", ".DS_Store", "._*"] $"($source_dir)/*"
     for link_target in $to_link {
         let link_path = [$target_dir, ($link_target | path basename)] | path join
         make_link $link_path $link_target
