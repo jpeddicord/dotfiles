@@ -1,3 +1,5 @@
+# `carapace _carapace nushell`
+
 def --env get-env [name] { $env | get $name }
 def --env set-env [name, value] { load-env { $name: $value } }
 def --env unset-env [name] { hide-env $name }

@@ -1,0 +1,6 @@
+theme = "Terafox"
+keybind = global:opt+backslash=toggle_quick_terminal
+command = shell:~/.local/share/mise/shims/nu
+macos-option-as-alt = true
+# shell-integration-features = ssh-env,ssh-terminfo
+# ^ doesn't yet work with nushell
