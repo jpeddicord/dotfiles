@@ -4,7 +4,6 @@ cd "$(dirname $0)"
 
 # bootstrap mise if not present
 alias mise=./setup/mise.run.sh
-export PATH="$HOME/.local/bin:$PATH"
 
 [ -e ~/.config/mise ] || ln -s "$PWD/files/_config/mise" ~/.config/mise
 mkdir -p ~/.config/mise/conf.d
