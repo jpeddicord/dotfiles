@@ -22,7 +22,7 @@
 [log]
 	decorate = full
 [merge]
-	tool = vimdiff3
+	tool = nvimdiff
 	conflictstyle = diff3
 [commit]
 	verbose = 1
