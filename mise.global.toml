@@ -20,7 +20,6 @@ sops = "latest"
 starship = "latest"
 tree-sitter = "latest"
 yazi = "latest"
-zellij = "latest"
 
 # nushell ships multiple binaries (plugins)
 "ubi:nushell/nushell" = { version = "latest", extract_all = true }
