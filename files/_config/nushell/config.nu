@@ -11,9 +11,9 @@ $env.config.history.file_format = "sqlite"
 $env.config.history.isolation = true
 
 $env.config.edit_mode = "vi"
-$env.config.buffer_editor = ["hx"]
-$env.VISUAL = "hx"
-$env.EDITOR = "hx"
+$env.config.buffer_editor = ["nvim"]
+$env.VISUAL = "nvim"
+$env.EDITOR = "nvim"
 $env.COLORTERM = "truecolor"
 
 $env.PROMPT_INDICATOR_VI_NORMAL = {||
