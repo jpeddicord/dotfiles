@@ -9,5 +9,5 @@ run = "nu setup/setup.nu"
 description = "Repo maintenance"
 run = [
   "git submodule update --recursive --remote",
-  "mise generate bootstrap -w setup/mise.run.sh"
+  "curl https://mise.run -o setup/mise.run.sh"
 ]
