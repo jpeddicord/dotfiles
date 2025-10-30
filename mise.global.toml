@@ -6,7 +6,6 @@ idiomatic_version_file_enable_tools = []
 
 [tools]
 age = "latest"
-btop = { version = "latest", os = ["linux"] }
 bun = "latest"
 carapace = "latest"
 fd = "latest"
@@ -22,5 +21,6 @@ starship = "latest"
 tree-sitter = "latest"
 yazi = "latest"
 
-# nushell ships multiple binaries (plugins)
-"ubi:nushell/nushell" = { version = "latest", extract_all = true }
+# linux-specific
+btop = { version = "latest", os = ["linux"] }
+"ubi:nushell/nushell" = { version = "latest", os = ["linux"], extract_all = true }
