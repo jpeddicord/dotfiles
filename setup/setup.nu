@@ -12,9 +12,13 @@ def main [] {
     create_new_links files/_config ~/.config
     create_new_links files/_ssh ~/.ssh
 
-    if (sys host | get name) == "Darwin" {
-      create_new_links files-macos ~
-      create_new_links files-macos/_config ~/.config
+    if (is_macos) {
+        create_new_links files-macos ~
+        create_new_links files-macos/_config ~/.config
+    }
+
+    if (is_windows) {
+        make_link $nu.default-config-dir ./files/_config/nushell
     }
 }
 
@@ -32,26 +36,42 @@ def clean_broken_links [dir: path] {
 }
 
 def create_new_links [source_dir: path, target_dir: path] {
-    let to_link = glob --exclude ["_*", ".DS_Store", "._*"] $"($source_dir)/*"
+    # 'glob' on windows doesn't work with backslashes or drive letters
+    let glob_path = [$source_dir, '*'] | path join | str replace --all '\' '/'
+    let to_link = glob --exclude ["_*", ".DS_Store", "._*"] $glob_path
     for link_target in $to_link {
         let link_path = [$target_dir, ($link_target | path basename)] | path join
         make_link $link_path $link_target
     }
 }
 
-def make_link [link_path: path, link_target: path] {
-    if ($link_path | path exists -n) {
-        let existing_type = $link_path | path type
-        let expanded = $link_path | path expand
+def make_link [link_name: path, link_target: path] {
+    let full_target = $link_target | path expand
+    if ($link_name | path exists -n) {
+        let existing_type = $link_name | path type
+        let expanded = $link_name | path expand
         if $existing_type != "symlink" {
-            print $"Skipping ($link_path) \(($existing_type)\) (ansi bg_y)\(existing file\)(ansi rst)"
+            print $"Skipping ($link_name) \(($existing_type)\) (ansi bg_y)\(existing file\)(ansi rst)"
         } else if $expanded != $link_target {
-            print $"Skipping ($link_path) -> ($expanded) (ansi bg_y)\(mistargeted\)(ansi rst)"
+            print $"Skipping ($link_name) -> ($expanded) (ansi bg_y)\(mistargeted\)(ansi rst)"
         } else {
-            print $"(ansi d)Skipping ($link_path) -> ($expanded)(ansi rst)"
+            print $"(ansi d)Skipping ($link_name) -> ($expanded)(ansi rst)"
         }
     } else {
-        ln -s $link_target $link_path
-        print $"(ansi bg_b)Linked ($link_path) -> ($link_target)(ansi rst)"
+        print $"(ansi bg_b)Linking ($link_name) -> ($link_target)(ansi rst)"
+        if (is_windows) {
+            let flags = if ($link_target | path type) == 'dir' {['/d']} else {[]}
+            ^mklink ...$flags $link_name $full_target
+        } else {
+            ln -s $full_target $link_name
+        }
     }
+}
+
+def is_macos [] {
+    (sys host | get name) == "Darwin"
+}
+
+def is_windows [] {
+    (sys host | get name) == "Windows"
 }
