@@ -11,3 +11,14 @@ run = [
   "git submodule update --recursive --remote",
   "curl https://mise.run -o setup/mise.run.sh"
 ]
+
+[tasks.'maintenance.sync-lazygit-config']
+description = "Sync lazygit colors from lazyvim's generated copy"
+shell = "nu"
+run = """
+#!/usr/bin/env nu
+let conf = open files/_config/lazygit/config.yml
+let theme = open ~/.cache/nvim/lazygit-theme.yml
+let updated = $conf | update gui.theme $theme.gui.theme
+$updated | save -f files/_config/lazygit/config.yml
+"""
