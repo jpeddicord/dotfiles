@@ -13,6 +13,12 @@ map("n", "<Leader>a", function()
   end
 end, { desc = "Focus explorer" })
 
+-- fully remove lazyvim's window movements; remapped below
+del("n", "<C-h>")
+del("n", "<C-j>")
+del("n", "<C-k>")
+del("n", "<C-l>")
+
 -- experimental colemak movement swaps
 -- do
 --   -- K => down (j), N => up (k); H and L remain left and right
