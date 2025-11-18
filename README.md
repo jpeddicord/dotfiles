@@ -26,7 +26,7 @@ Instead of using Colemak's caps-lock-as-backspace, caps lock shifts modes to an 
 | A       | A      | backspace  |
 | Q       | Q      | escape     |
 
-On an iPad using a remote session, caps lock is bound to `alt` for SSH connections, since you can't bind globally.
+On an iPad using a remote session, caps lock is bound to `ctrl` for SSH connections, since you can't bind globally.
 
 ### Remote shell shims
 
