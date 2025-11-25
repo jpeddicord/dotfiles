@@ -19,6 +19,7 @@ def main [] {
 
     if (is_windows) {
         make_link $nu.default-config-dir ./files/_config/nushell
+        make_link $'($env.LOCALAPPDATA)\nvim' ./files/_config/nvim
     }
 }
 
