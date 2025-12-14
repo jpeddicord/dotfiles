@@ -20,6 +20,7 @@ sops = "latest"
 starship = "latest"
 tree-sitter = "latest"
 yazi = "latest"
+zellij = "latest"
 
 # linux-specific
 btop = { version = "latest", os = ["linux"] }
