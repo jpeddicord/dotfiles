@@ -41,7 +41,7 @@ keybinds clear-defaults=true {
         bind "r" { NewPane "right"; SwitchToMode "locked"; }
         bind "s" { NewPane "stacked"; SwitchToMode "locked"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "locked"; }
-        bind "x" { CloseFocus; SwitchToMode "locked"; }
+        bind "Shift x" { CloseFocus; SwitchToMode "locked"; }
         bind "z" { TogglePaneFrames; SwitchToMode "locked"; }
         bind "tab" { SwitchFocus; }
     }
@@ -165,10 +165,14 @@ keybinds clear-defaults=true {
         }
     }
     shared_among "normal" "locked" {
-        bind "Alt k" { NewPane; }
+        bind "Alt t" { NewTab; }
         bind "Alt ," { GoToNextTab; }
         bind "Alt ." { GoToPreviousTab; }
+        bind "Alt k" { NewPane; }
         bind "Alt /" { FocusNextPane; }
+        bind "Alt p" { SwitchToMode "pane"; }
+        bind "Alt m" { TogglePaneInGroup; }
+        bind "Alt Shift m" { ToggleGroupMarking; }
 
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
@@ -187,8 +191,8 @@ keybinds clear-defaults=true {
         // bind "Alt l" { MoveFocusOrTab "right"; }
         // bind "Alt n" { NewPane; }
         // bind "Alt o" { MoveTab "right"; }
-        bind "Alt p" { TogglePaneInGroup; }
-        bind "Alt Shift p" { ToggleGroupMarking; }
+        // bind "Alt p" { TogglePaneInGroup; }
+        // bind "Alt Shift p" { ToggleGroupMarking; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl q" { Quit; }
@@ -339,7 +343,7 @@ default_mode "locked"
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -515,7 +519,7 @@ default_mode "locked"
 // Whether to show tips on startup
 // Default: true
 // 
-// show_startup_tips false
+show_startup_tips false
  
 // Whether to show release notes on first version run
 // Default: true
