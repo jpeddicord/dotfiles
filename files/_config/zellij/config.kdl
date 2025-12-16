@@ -16,6 +16,12 @@ keybinds clear-defaults=true {
         bind "Alt a" { Write 127; }          // bksp ^?
         bind "Alt q" { Write 27; }           // esc  ^[
     }
+    normal {
+        bind "left" { MoveFocus "left"; }
+        bind "down" { MoveFocus "down"; }
+        bind "up" { MoveFocus "up"; }
+        bind "right" { MoveFocus "right"; }
+    }
     pane {
         bind "left" { MoveFocus "left"; }
         bind "down" { MoveFocus "down"; }
@@ -160,8 +166,9 @@ keybinds clear-defaults=true {
     }
     shared_among "normal" "locked" {
         bind "Alt k" { NewPane; }
-        bind "Alt ," { MoveFocusOrTab "left"; }
-        bind "Alt ." { MoveFocusOrTab "right"; }
+        bind "Alt ," { GoToNextTab; }
+        bind "Alt ." { GoToPreviousTab; }
+        bind "Alt /" { FocusNextPane; }
 
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
