@@ -21,6 +21,7 @@ keybinds clear-defaults=true {
         bind "down" { MoveFocus "down"; }
         bind "up" { MoveFocus "up"; }
         bind "right" { MoveFocus "right"; }
+        bind "d" { Detach; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
