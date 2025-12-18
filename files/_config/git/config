@@ -22,8 +22,12 @@
 [log]
 	decorate = full
 [merge]
-	tool = nvimdiff
-	conflictstyle = diff3
+	tool = diffview
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "diffview"]
+  cmd = nvim -n -c DiffviewOpen
 [commit]
 	verbose = 1
 [filter "lfs"]
