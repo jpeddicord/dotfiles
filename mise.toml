@@ -9,7 +9,7 @@ run = "nu setup/setup.nu"
 description = "Repo maintenance"
 run = [
   "git submodule update --recursive --remote",
-  "curl https://mise.run -o setup/mise.run.sh"
+  "curl https://mise.run -o setup/mise.run.sh",
 ]
 
 [tasks.'maintenance.sync-lazygit-config']

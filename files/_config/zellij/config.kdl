@@ -9,12 +9,12 @@ keybinds clear-defaults=true {
         bind "Alt n" { Write 27 91 68; }     // left  ^[[D
         bind "Alt l" { Write 27 91 72; }     // home  ^[[H~
         bind "Alt y" { Write 27 91 70; }     // end   ^[[F~
-        bind "Alt j" { Write 27 91 53 126; } // pgup ^[[5~
-        bind "Alt h" { Write 27 91 54 126; } // pgdn ^[[6~
-        bind "Alt o" { Write 127; }          // bksp ^?
-        bind "Alt ;" { Write 27 91 51 126; } // del  ^[[3~
-        bind "Alt a" { Write 127; }          // bksp ^?
-        bind "Alt q" { Write 27; }           // esc  ^[
+        bind "Alt j" { Write 27 91 53 126; } // pgup  ^[[5~
+        bind "Alt h" { Write 27 91 54 126; } // pgdn  ^[[6~
+        bind "Alt o" { Write 127; }          // bksp  ^?
+        bind "Alt ;" { Write 27 91 51 126; } // del   ^[[3~
+        bind "Alt a" { Write 127; }          // bksp  ^?
+        bind "Alt q" { Write 27; }           // esc   ^[
     }
     normal {
         bind "left" { MoveFocus "left"; }

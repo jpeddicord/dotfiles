@@ -1,7 +1,7 @@
 return {
   {
     "folke/tokyonight.nvim",
-    enabled = false
+    enabled = false,
   },
   { "EdenEast/nightfox.nvim" },
 

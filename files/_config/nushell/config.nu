@@ -1,9 +1,9 @@
 # https://www.nushell.sh/book/configuration.html
 
 $env.path = [
-    "~/.local/bin",
-    "/opt/homebrew/bin",
-    "/usr/local/bin"
+  "~/.local/bin",
+  "/opt/homebrew/bin",
+  "/usr/local/bin"
 ] ++ $env.path
 
 $env.config.show_banner = false
@@ -17,9 +17,9 @@ $env.EDITOR = "nvim"
 $env.COLORTERM = "truecolor"
 
 $env.PROMPT_INDICATOR_VI_NORMAL = {||
-    let C = (ansi {fg: "#3d3d3d", bg: "#8AB900"})
-    let R = (ansi reset)
-    $"($C) ($R)"
+  let C = (ansi {fg: "#3d3d3d", bg: "#8AB900"})
+  let R = (ansi reset)
+  $"($C) ($R)"
 }
 $env.PROMPT_INDICATOR_VI_INSERT = " "
 
