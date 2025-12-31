@@ -52,14 +52,14 @@ def make_link [link_name: path, link_target: path] {
     let existing_type = $link_name | path type
     let expanded = $link_name | path expand
     if $existing_type != "symlink" {
-      print $"Skipping ($link_name) \(($existing_type)\) (ansi bg_y)\(existing file\)(ansi rst)"
+      print $"Skipping ($link_name) \(($existing_type)\) (ansi bg_y)\(existing file\)(ansi reset)"
     } else if $expanded != $link_target {
-      print $"Skipping ($link_name) -> ($expanded) (ansi bg_y)\(mistargeted\)(ansi rst)"
+      print $"Skipping ($link_name) -> ($expanded) (ansi bg_y)\(mistargeted\)(ansi reset)"
     } else {
-      print $"(ansi d)Skipping ($link_name) -> ($expanded)(ansi rst)"
+      print $"(ansi d)Skipping ($link_name) -> ($expanded)(ansi reset)"
     }
   } else {
-    print $"(ansi bg_b)Linking ($link_name) -> ($link_target)(ansi rst)"
+    print $"(ansi bg_b)Linking ($link_name) -> ($link_target)(ansi reset)"
     if (is_windows) {
       let flags = if ($link_target | path type) == 'dir' {['/d']} else {[]}
       ^mklink ...$flags $link_name $full_target
