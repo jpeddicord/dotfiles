@@ -1,6 +1,3 @@
-/README.md
-/mise.toml
-
 {{ if ne .chezmoi.os "linux" }}
 .chezmoiscripts/linux/**
 {{ end }}
