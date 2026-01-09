@@ -1,0 +1,17 @@
+[tasks.maintenance]
+description = "Repo maintenance"
+run = [
+  "git submodule update --recursive --remote",
+  "curl https://mise.run -o .chezmoiscripts/unix/run_once_after_mise.sh",
+]
+
+[tasks.'maintenance.sync-lazygit-config']
+description = "Sync lazygit colors from lazyvim's generated copy"
+shell = "nu"
+run = """
+#!/usr/bin/env nu
+let conf = open dot_config/lazygit/config.yml
+let theme = open ~/.cache/nvim/lazygit-theme.yml
+let updated = $conf | update gui.theme $theme.gui.theme
+$updated | save -f dot_config/lazygit/config.yml
+"""

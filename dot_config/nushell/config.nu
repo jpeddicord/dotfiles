@@ -30,4 +30,6 @@ alias ll = ls -la
 alias cz = chezmoi
 alias z = zellij
 
+alias scripts = mise -E system run
+
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash'
