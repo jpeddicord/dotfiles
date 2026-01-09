@@ -1,0 +1,26 @@
+update:
+  method: never
+gui:
+  showRootItemInFileTree: false
+  nerdFontsVersion: "3"
+  theme:
+    searchingActiveBorderColor:
+      - "#fda47f"
+      - bold
+    optionsTextColor:
+      - "#73a3b7"
+    inactiveBorderColor:
+      - "#587b7b"
+    defaultFgColor:
+      - "#e6eaea"
+    cherryPickedCommitFgColor:
+      - "#73a3b7"
+    cherryPickedCommitBgColor:
+      - "#a1cdd8"
+    activeBorderColor:
+      - "#fda47f"
+      - bold
+    unstagedChangesColor:
+      - "#e85c51"
+    selectedLineBgColor:
+      - "#293e40"

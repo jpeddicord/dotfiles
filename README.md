@@ -2,6 +2,10 @@
 
 use https://www.chezmoi.io/quick-start/
 
+```
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply jpeddicord
+```
+
 ## Fonts
 
 - [Lilex Nerd Font](https://www.nerdfonts.com) [(zip)](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Lilex.zip)

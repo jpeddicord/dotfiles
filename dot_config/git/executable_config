@@ -1,0 +1,43 @@
+[init]
+	defaultBranch = main
+[user]
+	# blanked to require per-repo setting
+	name =
+	email =
+[color]
+	ui = true
+[alias]
+	ci = commit
+	s = switch
+	st = status
+	df = diff
+	dff = diff --cached
+	dfff = diff HEAD
+	lg = log --graph --decorate --abbrev-commit --date=relative --all --pretty=format:'%C(blue)%h%C(reset) - %C(cyan)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold blue)- %an%C(reset)%C(yellow)%d%C(reset)'
+	orb = "!f() { git fetch origin ${1-main}:${1-main} && git rebase ${1-main}; }; f"
+[push]
+	default = simple
+[pull]
+	ff = only
+[log]
+	decorate = full
+[merge]
+	tool = diffview
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "diffview"]
+  cmd = nvim -n -c DiffviewOpen
+[commit]
+	verbose = 1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
