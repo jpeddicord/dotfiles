@@ -18,8 +18,11 @@ sops = "latest"
 starship = "latest"
 tree-sitter = "latest"
 yazi = "latest"
+
+{{- if eq .chezmoi.os "linux" "darwin" }}
 zellij = "latest"
+{{- end }}
 
-# linux-specific
-"ubi:nushell/nushell" = { version = "latest", os = ["linux"], extract_all = true }
-
+{{- if eq .chezmoi.os "linux" }}
+"ubi:nushell/nushell" = { version = "latest", extract_all = true }
+{{- end }}

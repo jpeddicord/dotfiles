@@ -11,8 +11,10 @@
 
 {{ if not (eq .chezmoi.os "linux" "darwin") }}
 .chezmoiscripts/unix/**
+.config/zellij
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
 .chezmoiscripts/windows/**
+AppData
 {{ end }}
