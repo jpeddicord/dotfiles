@@ -2,6 +2,7 @@
 
 $env.path = [
   "~/.local/bin",
+  "~/.local/share/mise/shims",
   "/opt/homebrew/bin",
   "/usr/local/bin"
 ] ++ $env.path
@@ -28,8 +29,16 @@ alias la = ls -a
 alias ll = ls -la
 
 alias cz = chezmoi
+alias m = mise
 alias z = zellij
 
 alias scripts = mise -E system run
 
+# addons
+let autoload = $nu.data-dir | path join "vendor/autoload"
+mkdir $autoload
+
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash'
+^mise activate nu | save -f ($autoload | path join "mise.nu")
+^carapace _carapace nushell | save -f ($autoload | path join "carapace.nu")
+^starship init nu | save -f ($autoload | path join "starship.nu")
