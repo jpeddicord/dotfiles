@@ -1,0 +1,22 @@
+[
+  {{- if eq .chezmoi.os "windows" }}
+  {
+    "bindings": {
+      "ctrl-c": "editor::Copy",
+      "ctrl-x": "editor::Cut",
+      "ctrl-v": "editor::Paste",
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-f": "search::FocusSearch",
+      "ctrl-s": "workspace::Save",
+    },
+  },
+  {{- end }}
+  {
+    "context": "(!Editor && !Terminal) || vim_mode==normal",
+    "bindings": {
+      "space a": "project_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space space": "file_finder::Toggle",
+    },
+  },
+]

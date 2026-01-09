@@ -1,0 +1,100 @@
+// https://zed.dev/docs/configuring-zed
+{
+  // appearance
+  "buffer_font_size": 12.0,
+  "buffer_font_family": "Lilex Nerd Font",
+  "ui_font_size": 14,
+  "theme": "Terafox - opaque",
+  "tab_size": 2,
+
+  // editor
+  "vim_mode": true,
+  "soft_wrap": "bounded",
+  "use_smartcase_search": true,
+  "vim": { "use_smartcase_find": true },
+  "buffer_line_height": "comfortable",
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "padding": 4,
+      "min_column": 80,
+    },
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "toggle_on_modifiers_press": { "alt": true },
+  },
+
+  // saving
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+  "code_actions_on_format": {},
+
+  // panels
+  "git_panel": {
+    "tree_view": true,
+    "sort_by_path": false,
+    "dock": "left",
+  },
+  "project_panel": {
+    "entry_spacing": "standard",
+    "indent_size": 10,
+    "hide_root": true,
+  },
+
+  // terminal
+  "terminal": {
+    "line_height": "standard",
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "shell": {
+      {{- if eq .chezmoi.os "darwin" }}
+      "program": "/opt/homebrew/bin/nu",
+      {{- else }}
+      "program": "nu",
+      {{- end }}
+    },
+  },
+
+  // junk
+  "disable_ai": true,
+  "agent": {
+    "enable_feedback": false,
+    "enabled": false,
+  },
+  "show_edit_predictions": false,
+  "collaboration_panel": {
+    "button": false,
+  },
+  "toolbar": {
+    "agent_review": false,
+  },
+  "title_bar": {
+    "show_sign_in": false,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  "languages": {
+    "Astro": {
+      "language_servers": [
+        "!vstls",
+        "biome",
+        "tailwindcss-language-server",
+        "...",
+      ],
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "TOML": {
+      "language_servers": ["tombi"],
+      "formatter": { "language_server": { "name": "tombi" } },
+    },
+  },
+}
