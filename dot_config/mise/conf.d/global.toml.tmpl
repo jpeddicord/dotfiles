@@ -5,21 +5,21 @@ idiomatic_version_file_enable_tools = []
 [tools]
 age = "latest"
 bun = "latest"
-carapace = "latest"
 fd = "latest"
 fzf = "latest"
 gh = "latest"
 gum = "latest"
 lazygit = "latest"
-neovim = "latest"
 node = "latest"
 ripgrep = "latest"
 sops = "latest"
-starship = "latest"
-tree-sitter = "latest"
 yazi = "latest"
 
 {{- if eq .chezmoi.os "linux" "darwin" }}
+carapace = "latest"
+neovim = "latest"
+tree-sitter = "latest"
+starship = "latest"
 zellij = "latest"
 {{- end }}
 

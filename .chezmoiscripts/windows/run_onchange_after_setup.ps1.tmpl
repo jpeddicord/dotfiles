@@ -1,0 +1,8 @@
+# shell stuff
+scoop install carapace-bin starship
+# neovim
+scoop install neovim tree-sitter
+
+# hash the mise config, so that this script changes when it does and is run again
+# hash: {{ include "dot_config/mise/conf.d/global.toml.tmpl" | sha256sum }}
+mise install
