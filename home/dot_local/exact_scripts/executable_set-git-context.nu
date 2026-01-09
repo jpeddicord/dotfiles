@@ -1,7 +1,5 @@
 #!/usr/bin/env nu
 #MISE description="Set dir-specific git/gh context"
-#MISE dir="{{cwd}}"
-#MISE quiet=true
 
 print (pwd)
 

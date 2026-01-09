@@ -32,7 +32,13 @@ alias cz = chezmoi
 alias m = mise
 alias z = zellij
 
-alias scripts = mise -E system run
+def scripts [] {
+  let files = glob ~/.local/scripts/* | each {|s| $s | path basename}
+  let choice = "[cancel]" | append $files | input list -f
+  if $choice == "[cancel]" { return }
+  print $"(ansi { fg: "#3d3d3d", bg: "#5ac9ef" }) ($choice) (ansi reset)"
+  nu ~/.local/scripts/($choice)
+}
 
 # addons
 let autoload = $nu.data-dir | path join "vendor/autoload"
