@@ -17,7 +17,7 @@ starship = "latest"
 {{- end }}
 
 {{- if eq .chezmoi.os "linux" }}
-"ubi:nushell/nushell" = { version = "latest", extract_all = true }
+nushell = "latest"
 {{- end }}
 
 {{- if eq .variant "full" }}
@@ -35,3 +35,6 @@ tree-sitter = "latest"
 zellij = "latest"
 {{- end }}
 {{- end }}
+
+[tool_alias]
+nushell = "github:nushell/nushell"
