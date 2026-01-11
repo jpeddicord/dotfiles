@@ -16,6 +16,7 @@ $env.config.buffer_editor = ["nvim"]
 $env.VISUAL = "nvim"
 $env.EDITOR = "nvim"
 $env.COLORTERM = "truecolor"
+$env.LANG = "en_US.UTF-8"
 
 $env.PROMPT_INDICATOR_VI_NORMAL = {||
   let C = (ansi {fg: "#3d3d3d", bg: "#8AB900"})
