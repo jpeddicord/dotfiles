@@ -14,7 +14,6 @@ yazi = "latest"
 {{- if eq .chezmoi.os "linux" "darwin" }}
 carapace = "latest"
 starship = "latest"
-zellij = "latest"
 {{- end }}
 
 {{- if eq .chezmoi.os "linux" }}
@@ -30,7 +29,9 @@ lazygit = "latest"
 node = "latest"
 
 {{- if eq .chezmoi.os "linux" "darwin" }}
+btop = "latest"
 neovim = "latest"
 tree-sitter = "latest"
+zellij = "latest"
 {{- end }}
 {{- end }}
