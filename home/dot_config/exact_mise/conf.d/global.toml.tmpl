@@ -3,26 +3,34 @@ experimental = true
 idiomatic_version_file_enable_tools = []
 
 [tools]
+# minimal set
 age = "latest"
-bun = "latest"
 fd = "latest"
-fzf = "latest"
-gh = "latest"
 gum = "latest"
-lazygit = "latest"
-node = "latest"
 ripgrep = "latest"
 sops = "latest"
 yazi = "latest"
 
 {{- if eq .chezmoi.os "linux" "darwin" }}
 carapace = "latest"
-neovim = "latest"
-tree-sitter = "latest"
 starship = "latest"
 zellij = "latest"
 {{- end }}
 
 {{- if eq .chezmoi.os "linux" }}
 "ubi:nushell/nushell" = { version = "latest", extract_all = true }
+{{- end }}
+
+{{- if eq .variant "full" }}
+# full set
+bun = "latest"
+fzf = "latest"
+gh = "latest"
+lazygit = "latest"
+node = "latest"
+
+{{- if eq .chezmoi.os "linux" "darwin" }}
+neovim = "latest"
+tree-sitter = "latest"
+{{- end }}
 {{- end }}
