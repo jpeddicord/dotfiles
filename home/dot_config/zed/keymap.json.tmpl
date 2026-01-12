@@ -15,8 +15,12 @@
     "context": "(!Editor && !Terminal) || vim_mode==normal",
     "bindings": {
       "space a": "project_panel::ToggleFocus",
-      "space g": "git_panel::ToggleFocus",
+      "space r": "git_panel::ToggleFocus",
+      "space t": "task::Spawn",
+      "space g g": ["task::Spawn", { "task_name": "🦊 lazygit" }],
+      "space g l": ["task::Spawn", { "task_name": "🦊 lazygit log" }],
       "space space": "file_finder::Toggle",
+      "space tab": "editor::ToggleFocus",
     },
   },
 ]

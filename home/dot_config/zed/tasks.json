@@ -1,0 +1,16 @@
+// https://zed.dev/docs/tasks
+[
+  {
+    "label": "🦊 lazygit",
+    "command": "lazygit",
+    "hide": "on_success",
+    "reveal_target": "center",
+  },
+  {
+    "label": "🦊 lazygit log",
+    "command": "lazygit",
+    "args": ["-f", "\"$ZED_RELATIVE_FILE\""],
+    "hide": "on_success",
+    "reveal_target": "center",
+  },
+]
