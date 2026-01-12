@@ -29,10 +29,13 @@ lazygit = "latest"
 node = "latest"
 
 {{- if eq .chezmoi.os "linux" "darwin" }}
-btop = "latest"
 neovim = "latest"
 tree-sitter = "latest"
 zellij = "latest"
+{{- end }}
+
+{{- if eq .chezmoi.os "linux" }}
+btop = "latest"
 {{- end }}
 {{- end }}
 
