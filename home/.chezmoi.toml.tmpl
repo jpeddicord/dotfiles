@@ -1,4 +1,4 @@
-umask = 0o022
+# umask = 0o022
 
 {{- $choices := list "minimal" "full" }}
 {{- $variant := promptChoiceOnce . "variant" "Pick dotfiles variant" $choices "minimal" }}
