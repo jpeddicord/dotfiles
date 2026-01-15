@@ -10,6 +10,7 @@
   // editor
   "vim_mode": true,
   "soft_wrap": "bounded",
+  "preferred_line_length": 100,
   "use_smartcase_search": true,
   "vim": { "use_smartcase_find": true },
   "buffer_line_height": "comfortable",
@@ -80,21 +81,28 @@
 
   "languages": {
     "Astro": {
-      "language_servers": [
-        "!vstls",
-        "biome",
-        "tailwindcss-language-server",
-        "...",
-      ],
+      "language_servers": ["!vstls", "biome", "tailwindcss-language-server", "..."],
       "formatter": { "language_server": { "name": "biome" } },
       "code_actions_on_format": {
         "source.fixAll.biome": true,
         "source.organizeImports.biome": true,
       },
     },
+    "CSS": {
+      "language_servers": ["tailwindcss-intellisense-css", "!vscode-css-language-server", "..."],
+    },
     "TOML": {
       "language_servers": ["tombi"],
       "formatter": { "language_server": { "name": "tombi" } },
+    },
+    "TypeScript": {
+      "language_servers": ["tsgo"],
+    },
+    "JavaScript": {
+      "language_servers": ["tsgo"],
+    },
+    "TSX": {
+      "language_servers": ["tsgo"],
     },
   },
 }
