@@ -167,8 +167,8 @@ keybinds clear-defaults=true {
     }
     shared_among "normal" "locked" {
         bind "Alt t" { NewTab; }
-        bind "Alt ," { GoToNextTab; }
-        bind "Alt ." { GoToPreviousTab; }
+        bind "Alt ," { GoToPreviousTab; }
+        bind "Alt ." { GoToNextTab; }
         bind "Alt k" { NewPane; }
         bind "Alt /" { FocusNextPane; }
         bind "Alt p" { SwitchToMode "pane"; }
