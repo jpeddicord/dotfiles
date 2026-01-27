@@ -1,0 +1,6 @@
+# hash: {{ include "dot_local/exact_util/exact_ahk/keybinds.ahk" | sha256sum }}
+
+$Shell = New-Object -COMObject WScript.Shell
+$Shortcut = $Shell.CreateShortcut("$Env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\keybinds.lnk")
+$Shortcut.TargetPath = "{{ .chezmoi.destDir }}\.local\util\ahk\keybinds.ahk"
+$Shortcut.Save()

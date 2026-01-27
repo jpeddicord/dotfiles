@@ -15,5 +15,6 @@
 
 {{ if ne .chezmoi.os "windows" }}
 .chezmoiscripts/windows/**
+.local/util/ahk
 AppData
 {{ end }}
