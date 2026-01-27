@@ -1,5 +1,4 @@
 #!/usr/bin/env nu
-#MISE description="Set dir-specific git/gh context"
 
 print (pwd)
 

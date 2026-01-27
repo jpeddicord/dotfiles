@@ -34,11 +34,11 @@ alias m = mise
 alias z = zellij
 
 def scripts [] {
-  let files = glob ~/.local/scripts/* | each {|s| $s | path basename}
+  let files = glob ~/.local/util/scripts/* | each {|s| $s | path basename}
   let choice = "[cancel]" | append $files | input list -f
-  if $choice == "[cancel]" { return }
+  if $choice == "[cancel]" or $choice == null { return }
   print $"(ansi { fg: "#3d3d3d", bg: "#5ac9ef" }) ($choice) (ansi reset)"
-  nu ~/.local/scripts/($choice)
+  nu ~/.local/util/scripts/($choice)
 }
 
 # addons

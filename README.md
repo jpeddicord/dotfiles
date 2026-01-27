@@ -28,3 +28,6 @@ Instead of using Colemak's caps-lock-as-backspace, caps lock shifts modes to an 
 
 On an iPad using a remote session, caps lock is bound to `ctrl` for SSH connections, since you can't bind globally.
 
+## Hashes in scripts
+
+Lines like `# hash {{ ...` ensure a script changes when another file does, so it runs on relevant updates.
