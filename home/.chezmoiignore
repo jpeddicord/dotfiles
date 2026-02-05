@@ -18,3 +18,8 @@
 .local/util/ahk
 AppData
 {{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+# skip zed config on linux because I usually use that remotely, and this conflicts
+.config/zed
+{{ end }}
