@@ -33,6 +33,11 @@ alias cz = chezmoi
 alias m = mise
 alias z = zellij
 
+alias sc = sudo systemctl
+alias scu = systemctl --user
+alias jr = sudo journalctl -xe --unit
+alias jru = journalctl --user -xe --unit
+
 def scripts [] {
   let files = glob ~/.local/util/scripts/* | each {|s| $s | path basename}
   let choice = "[cancel]" | append $files | input list -f
