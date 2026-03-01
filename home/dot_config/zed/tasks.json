@@ -13,4 +13,10 @@
     "hide": "on_success",
     "reveal_target": "center",
   },
+  {
+    "label": "🦊 jjui",
+    "command": "jjui",
+    "hide": "on_success",
+    "reveal_target": "center",
+  },
 ]
