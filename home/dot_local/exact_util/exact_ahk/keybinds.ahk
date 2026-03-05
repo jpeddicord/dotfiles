@@ -15,11 +15,10 @@ BindScrollShift(button, actionUp, actionDown) {
 BindScrollShift("XButton1", "{WheelLeft 3}", "{WheelRight 3}")
 BindScrollShift("XButton2", "{WheelUp 5}", "{WheelDown 5}")
 
-; extend mode keys
+; right side of keyboard: extend mode keys
 SetCapsLockState("AlwaysOff")
 CapsLock:: ; disable
 CapsLock UP::SetCapsLockState("AlwaysOff") ; helps accidentally capslocking on an elevated window
-CapsLock & A::Send("{Backspace}")
 CapsLock & E::Send("{Down}")
 CapsLock & H::Send("{PgDn}")
 CapsLock & I::Send("{Right}")
@@ -27,7 +26,22 @@ CapsLock & J::Send("{PgUp}")
 CapsLock & L::Send("{Home}")
 CapsLock & N::Send("{Left}")
 CapsLock & O::Send("{Backspace}")
-CapsLock & Q::Send("{Esc}")
 CapsLock & U::Send("{Up}")
 CapsLock & Y::Send("{End}")
 CapsLock & `;::Send("{Delete}")
+
+; left side of keyboard: capslock as ctrl and some extends
+CapsLock & Q::Send("{Esc}")
+CapsLock & W::^w
+CapsLock & F::^f
+CapsLock & P::^p
+CapsLock & G::^g
+CapsLock & A::Send("{Backspace}")
+CapsLock & R::^r
+CapsLock & S::^s
+CapsLock & T::^t
+CapsLock & D::^d
+CapsLock & Z::^z
+CapsLock & X::^x
+CapsLock & C::^c
+CapsLock & V::^v
