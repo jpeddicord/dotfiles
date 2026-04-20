@@ -13,3 +13,9 @@ map("n", "<Leader>a", function()
   end
 end, { desc = "Focus explorer" })
 
+-- jjui on space-jj
+if vim.fn.executable("jjui") == 1 then
+  map("n", "<Leader>jj", function()
+    Snacks.terminal.open("jjui")
+  end)
+end
